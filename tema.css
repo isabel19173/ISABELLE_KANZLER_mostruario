@@ -1,0 +1,243 @@
+:root {
+    --aero-blue: #05668D;
+    --aero-green: #02C39A;
+    --aero-light: #e0f2fe;
+    --glass-bg: rgba(255, 255, 255, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.85);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background:url('img/tema.png') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--aero-blue);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho de Vidro (Aero Glass) */
+.cabecalho {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    /* O topo é mais esbranquiçado e a base mais transparente */
+    background: linear-gradient(to bottom, rgba(255,255,255,0.85) 0%, rgba(224,242,254,0.45) 100%);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--glass-border);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05), inset 0 2px 5px rgba(255,255,255,1);
+    z-index: 100;
+}
+
+.logo { 
+    font-size: 26px; 
+    font-weight: 700; 
+    text-decoration: none; 
+    color: var(--aero-blue); 
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8); 
+}
+.logo span { color: var(--aero-green); }
+
+.navbar a { 
+    margin-left: 25px; 
+    text-decoration: none; 
+    color: var(--aero-blue); 
+    font-weight: 600; 
+    transition: 0.3s; 
+    text-shadow: 0px 1px 2px rgba(255,255,255,0.8); 
+}
+.navbar a:hover, .navbar a.active { 
+    color: var(--aero-green); 
+    text-shadow: 0 0 10px rgba(2, 195, 154, 0.5); 
+}
+
+/* Seções Gerais */
+section { 
+    min-height: 100vh; 
+    padding: 120px 10% 50px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+}
+.titulo-secao { 
+    font-size: 40px; 
+    margin-bottom: 40px; 
+    text-shadow: 0 2px 5px rgba(255,255,255,0.8); 
+    text-align: center; 
+}
+.titulo-secao span { color: var(--aero-green); }
+
+/* Home */
+.home { flex-direction: row; justify-content: space-between; }
+.home-content h1 { font-size: 50px; text-shadow: 0 2px 10px rgba(255,255,255,0.9); margin: 10px 0; }
+.home-content h3 { font-size: 24px; text-shadow: 0 1px 5px rgba(255,255,255,0.8); }
+.text { color: var(--aero-green); }
+.home-content p { 
+    margin: 20px 0; 
+    font-size: 18px; 
+    font-weight: 500; 
+    text-shadow: 0 1px 3px rgba(255,255,255,0.8); 
+}
+
+.home-sci a { 
+    font-size: 30px; 
+    margin-right: 15px; 
+    color: var(--aero-blue); 
+    transition: 0.3s; 
+    display: inline-block; 
+}
+.home-sci a:hover { 
+    color: var(--aero-green); 
+    transform: translateY(-5px); 
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2)); 
+}
+
+/* Botão Estilo Gel/Glossy */
+.btn-aero {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    /* Efeito glossy com corte no meio */
+    background: linear-gradient(to bottom, #8ee3f5 0%, #02C39A 48%, #00A896 50%, #02C39A 100%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 2px 4px rgba(255,255,255,0.9), 0 5px 15px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn-aero:hover { 
+    transform: translateY(-3px); 
+    box-shadow: inset 0 2px 4px rgba(255,255,255,0.9), 0 8px 20px rgba(0,0,0,0.25); 
+    filter: brightness(1.1); 
+}
+.btn-pequeno { padding: 8px 20px; font-size: 14px; margin-top: 15px; }
+
+/* Imagem de Perfil */
+.fundo-img img {
+    width: 350px;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2), inset 0 0 20px rgba(255,255,255,0.5);
+    animation: flutuar 5s infinite ease-in-out;
+}
+@keyframes flutuar { 0%, 100% {transform: translateY(0)} 50% {transform: translateY(-20px)} }
+
+/* Sobre Mim & Painéis de Vidro */
+.sobre { flex-direction: row; gap: 40px; }
+.sobre-img img { 
+    width: 300px; 
+    border-radius: 20px; 
+    border: 5px solid white; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+}
+.painel-vidro, .card-aero, .contato-box {
+    background: rgba(255, 255, 255, 0.65); /* Aumentei um pouco a opacidade para ler melhor */
+    backdrop-filter: blur(15px); /* Efeito de vidro fosco */
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.painel-vidro {
+    background: var(--glass-bg);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(255, 255, 255, 0.6);
+}
+.painel-vidro p { margin-bottom: 15px; line-height: 1.6; font-weight: 500; }
+
+/* Skills (Esferas) */
+.skills-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+.skill-sphere {
+    width: 130px; height: 130px;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    border: 2px solid white;
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.1), inset -5px -5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+.skill-sphere:hover { transform: scale(1.1); box-shadow: 0 15px 25px rgba(2, 195, 154, 0.3); }
+.skill-sphere i { font-size: 50px; margin-bottom: 5px; }
+.skill-sphere p { font-weight: 600; font-size: 14px; }
+
+/* Projetos */
+.cards-projetos { 
+    display: flex; 
+    gap: 30px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    max-width: 1000px; 
+}
+.card-aero {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(255, 255, 255, 0.6);
+    transition: 0.3s;
+}
+.card-aero:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
+.card-aero img { width: 100%; border-radius: 12px; border: 3px solid white; margin-bottom: 15px; }
+.card-aero h4 { font-size: 20px; margin-bottom: 10px; }
+.card-aero p { font-size: 14px; margin-bottom: 15px; font-weight: 500; }
+
+/* Contato */
+.contato-box {
+    width: 100%; max-width: 600px;
+    background: var(--glass-bg);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+.contato-box input, .contato-box textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    font-size: 15px;
+    outline: none;
+    color: var(--aero-blue);
+    font-weight: 500;
+}
+.contato-box input:focus, .contato-box textarea:focus { 
+    background: rgba(255,255,255,0.9); 
+    border-color: var(--aero-green); 
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid white;
+    font-weight: 600;
+}

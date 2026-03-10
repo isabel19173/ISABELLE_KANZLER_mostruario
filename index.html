@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabelle Cristine Kanzler | Portfólio Aero</title>
+    <link rel="icon" type="image/png" href="img/portifório .jpeg">
+    
+    <link rel="stylesheet" href="tema.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="bolhas">
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <header class="cabecalho">
+        <a href="#home" class="logo">Isabelle<span>Kanzler</span></a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Skills</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Olá, eu sou</h3>
+                <h1>Isabelle Cristine Kanzler</h1>
+                <h3>Eu sou <span class="text"></span></h3>
+                <p>"Eu penso bastante, mas não falo nada." — Anne Frank</p>
+                
+                <div class="home-sci">
+                    <a href="https://github.com/isabel19173" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/isabelle-cristine-kanzler-68711a305" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="mailto:isabellekanzler@gmail.com"><i class='bx bx-envelope'></i></a>
+                </div>
+                <a href="img/cv.isabelle kanzler.png" download class="btn-aero">Download CV</a>
+            </div>
+
+            <div class="fundo-img">
+                <img src="img/41068.jpg" alt="Isabelle Kanzler">
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="sobre-img">
+                <img src="img/sobremim.jpg" alt="Sobre Mim">
+            </div>
+            <div class="texto-sobre">
+                <h2>Sobre <span>Mim</span></h2>
+                <div class="painel-vidro">
+                    <p>Estudante de Ensino Médio Integrado ao Técnico em Mecânica no IFSC com conclusão prevista para 2026. Unindo o raciocínio lógico da engenharia com a paixão pelo desenvolvimento de software, venho aprimorando competências em HTML5, CSS3, JavaScript e Python.</p>
+                    <p>Possuo um perfil proativo e organizado, com experiência prática em liderança como representante de classe e atuação voluntária na área de mídia. Além do desenvolvimento web, tenho domínio de ferramentas como Excel Avançado e fluência em Inglês (nível avançado), o que me permite navegar com facilidade em ambientes corporativos e técnicos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="habilidades" id="habilidades">
+            <h2 class="titulo-secao">Minhas <span>Habilidades</span></h2>
+            <div class="skills-grid">
+                <div class="skill-sphere"><i class="devicon-html5-plain colored"></i><p>HTML5</p></div>
+                <div class="skill-sphere"><i class="devicon-css3-plain colored"></i><p>CSS3</p></div>
+                <div class="skill-sphere"><i class="devicon-javascript-plain colored"></i><p>JS</p></div>
+                <div class="skill-sphere"><i class="devicon-python-plain colored"></i><p>Python</p></div>
+                <div class="skill-sphere"><i class="devicon-github-original"></i><p>GitHub</p></div>
+            </div>
+        </section>
+
+        <section class="projetos" id="projetos">
+            <h2 class="titulo-secao">Projetos <span>Recentes</span></h2>
+            <div class="cards-projetos">
+                <article class="card-aero">
+                    <img src="img/site frutiger aer0 .png" alt="Projeto">
+                    <h4>Portfólio Aero</h4>
+                    <p>Design inspirado na era áurea do Windows Vista/7 e Frutiger Aero.</p>
+                    <a href="#" class="btn-aero btn-pequeno">Ver Detalhes</a>
+                </article>
+                 <article class="card-aero">
+                    <img src="img/siterecomendação.png" alt="Projeto">
+                    <h4>Guia de Entretenimento</h4>
+                    <p><strong>Sua próxima história favorita</strong>: Um hub interativo para descoberta de filmes, livros e músicas com curadoria personalizada.</p>
+                    <a href="https://isabel19173.github.io/site_proposta2025/index.html" class="btn-aero btn-pequeno">Ver Detalhes</a>
+                </article>
+                <article class="card-aero">
+                    <img src="img/siteshoujo.png" alt="Projeto">
+                    <h4>Café Virtual</h4>
+                    <p><strong>O Suspiro da Flor de Cerejeira</strong>: Website experimental de um café temático japonês, inspirado na estética dos mangás shoujo.</p>
+                    <a href="#" class="btn-aero btn-pequeno">Ver Detalhes</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <div class="contato-box">
+                <h2>Vamos <span>Conversar?</span></h2>
+                <form onsubmit="enviarWhatsApp(event)">
+                    <input type="text" id="nome" placeholder="Seu Nome" required>
+                    <input type="email" id="email" placeholder="Seu E-mail" required>
+                    <textarea id="mensagem" placeholder="Sua Mensagem..." rows="5" required></textarea>
+                    <button type="submit" class="btn-aero">Enviar via WhatsApp</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright © 2026 | Isabelle Cristine Kanzler ⋆.˚🐠‧₊˚✩ ₊˚🫧⊹♡</p>
+    </footer>
+
+</body>
+</html>
